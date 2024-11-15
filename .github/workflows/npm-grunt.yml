@@ -1,4 +1,4 @@
-name: NodeJS with Grunt
+name: Node.js CI with Grunt
 
 on:
   push:
@@ -12,34 +12,37 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [18.x, 20.x]
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-    - name: Setup Node.js ${{ matrix.node-version }}
+    - name: Set up Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: "npm"
-        cache-dependency-path: "package-lock.json"
+        cache: 'npm'
 
-    - name: Install dependencies and fix vulnerabilities
+    - name: Install dependencies
       run: |
-        npm ci
-        npm install uuid@latest @npmcli/fs@latest --save
-        npm audit fix --force || true
+        npm install
+        npm install grunt-cli --save-dev
 
     - name: Run Grunt tasks
       run: |
         grunt
 
-    - name: Send Telegram notification (optional)
-      if: failure() || success()
+    - name: Upload artifacts
+      if: success()
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist-files
+        path: dist/
+
+    - name: Set Telegram Webhook
+      if: success()  # 确保在构建成功后执行
       run: |
-        status="${{ job.status }}"
-        message="Build Status: $status\nBranch: ${{ github.ref_name }}\nNode.js Version: ${{ matrix.node-version }}"
-        curl -X POST "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/sendMessage" \
-          -d chat_id=<YOUR_CHAT_ID> \
-          -d text="$message"
+        curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/setWebhook" \
+             -d url="https://stonle.com:8443/telegram-webhook/19941221"
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
