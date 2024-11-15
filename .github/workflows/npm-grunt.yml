@@ -15,32 +15,42 @@ jobs:
         node-version: [18.x, 20.x, 22.x]
 
     steps:
-    - uses: actions/checkout@v4
+    # Step 1: 检出代码
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    # Step 2: 设置 Node.js 环境
+    - name: Setup Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
+        cache: "npm"  # 启用 npm 缓存
+        cache-dependency-path: "package-lock.json"
 
-    - name: Install Grunt CLI and dependencies
+    # Step 3: 安装依赖
+    - name: Install dependencies
       run: |
-        npm install -g grunt-cli
-        npm install
-        npm install grunt --save-dev  # 本地安装 grunt
+        npm ci  # 更快的安装方式，保证依赖与 lock 文件一致
+        npm install -g grunt-cli  # 全局安装 Grunt CLI
 
-    - name: Run Grunt
+    # Step 4: 安全检查并修复
+    - name: Audit and fix vulnerabilities
+      run: |
+        npm audit --production || true  # 显示潜在漏洞，但不中断构建
+        npm audit fix --force || true   # 自动修复大部分安全漏洞
+
+    # Step 5: 运行 Grunt 任务
+    - name: Run Grunt tasks
       run: |
         grunt
 
-    - name: Set up Node.js environment (optional settings)
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        always-auth: false
-        architecture: x64
-        check-latest: true
-        registry-url: "https://registry.npmjs.org"
-        scope: ""
-        token: ${{ secrets.GITHUB_TOKEN }}
-        cache: "npm"
-        cache-dependency-path: "package-lock.json"
+    # Step 6: 发送构建通知（可选）
+    - name: Send Telegram notification
+      if: failure() || success()
+      run: |
+        status="${{ job.status }}"
+        message="Build Status: $status\nBranch: ${{ github.ref_name }}\nNode.js Version: ${{ matrix.node-version }}"
+        curl -X POST "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/sendMessage" \
+          -d chat_id=<YOUR_CHAT_ID> \
+          -d text="$message"
+
