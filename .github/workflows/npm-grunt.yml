@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
-npm install -g grunt-cli
+
     steps:
     - uses: actions/checkout@v4
 
@@ -22,12 +22,16 @@ npm install -g grunt-cli
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies and run Grunt
+    - name: Install Grunt CLI and dependencies
       run: |
+        npm install -g grunt-cli
         npm install
+
+    - name: Run Grunt
+      run: |
         grunt
 
-    - name: Set up Node.js environment
+    - name: Set up Node.js environment (optional settings)
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
