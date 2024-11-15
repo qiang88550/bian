@@ -26,6 +26,7 @@ jobs:
       run: |
         npm install -g grunt-cli
         npm install
+        npm install grunt --save-dev  # 本地安装 grunt
 
     - name: Run Grunt
       run: |
@@ -35,11 +36,11 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        always-auth: false  # Optional, set to true if always-auth is needed
-        architecture: x64  # Optional, specify target architecture
-        check-latest: true  # Optional, use latest available matching version
-        registry-url: "https://registry.npmjs.org"  # Optional registry URL for authentication
-        scope: ""  # Optional, for scoped registries if needed
-        token: ${{ secrets.GITHUB_TOKEN }}  # Optional, token for GitHub registry access
-        cache: "npm"  # Optional, specify package manager for caching (e.g., npm, yarn, pnpm)
-        cache-dependency-path: "package-lock.json"  # Optional, path to dependency lock file
+        always-auth: false
+        architecture: x64
+        check-latest: true
+        registry-url: "https://registry.npmjs.org"
+        scope: ""
+        token: ${{ secrets.GITHUB_TOKEN }}
+        cache: "npm"
+        cache-dependency-path: "package-lock.json"
