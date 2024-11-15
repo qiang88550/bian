@@ -1,0 +1,5 @@
+[
+    { "fromAsset": "BTC", "toAsset": "USDT" },
+    { "fromAsset": "ETH", "toAsset": "USDT" },
+    { "fromAsset": "BNB", "toAsset": "USDT" }
+]

@@ -1,0 +1,15 @@
+{
+    "convert_failed": "❌ *Konvertering Misslyckades:*\n{{errorMessage}}",
+    "convert_success": "✅ *Konvertering Lyckades!*\n\n*Från:* {{fromAsset}}\n*Till:* {{toAsset}}\n*Antal:* {{amount}}\n*Order-ID:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *Begränsad Antal Förfrågningar Överskridet:*\nVänligen försök igen senare.",
+    "not_supported": "⚠️ *Ej Stödd Par:*\n{{fromAsset}} ↔️ {{toAsset}} stöds inte.",
+    "status_not_found": "⚠️ *Order Hittades Inte:*\nIngen order hittades med ID {{orderId}}.",
+    "status_details": "*Order-ID:* {{orderId}}\n*Status:* {{status}}",
+    "status_failed": "*Order-ID:* {{orderId}}\n*Status:* {{status}}\n*Fel:* {{error}}",
+    "help": {
+        "content": "📚 *Hjälpmeny:*\n\n`/convert <fromAsset> <toAsset> <amount>` - Konvertera tillgångar.\n`/status <orderId>` - Kontrollera orderstatus.\n`/help` - Visa hjälp.\n`/listassets` - Lista stödda tillgångspar.\n`/placeorder <fromAsset> <toAsset> <amount> <price>` - Placera en limitorder.\n`/cancelorder <orderId>` - Avbryt en order.\n`/queryopenorders` - Fråga om öppna order.\n`/tradehistory` - Visa handels historia.\n`/setlang <en|zh|es|fr|de|ja|ko|vi|it|nl|ru|pt|sv|no|da>` - Ställ in språk.",
+        "description": "Hjälpmeny innehåll"
+    },
+    "listassets_title": "📋 *Stödda Tillgångspar:*",
+    "permission_denied": "⚠️ Du har inte behörighet att utföra denna åtgärd."
+}

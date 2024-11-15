@@ -1,0 +1,15 @@
+{
+    "convert_failed": "❌ *Conversão Falhou:*\n{{errorMessage}}",
+    "convert_success": "✅ *Conversão Bem-Sucedida!*\n\n*De:* {{fromAsset}}\n*Para:* {{toAsset}}\n*Quantidade:* {{amount}}\n*ID do Pedido:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *Limite de Solicitações Excedido:*\nPor favor, tente novamente mais tarde.",
+    "not_supported": "⚠️ *Par Não Suportado:*\n{{fromAsset}} ↔️ {{toAsset}} não é suportado.",
+    "status_not_found": "⚠️ *Pedido Não Encontrado:*\nNenhum pedido encontrado com o ID {{orderId}}.",
+    "status_details": "*ID do Pedido:* {{orderId}}\n*Status:* {{status}}",
+    "status_failed": "*ID do Pedido:* {{orderId}}\n*Status:* {{status}}\n*Erro:* {{error}}",
+    "help": {
+        "content": "📚 *Menu de Ajuda:*\n\n`/convert <fromAsset> <toAsset> <amount>` - Converter ativos.\n`/status <orderId>` - Verificar o status do pedido.\n`/help` - Mostrar ajuda.\n`/listassets` - Listar pares de ativos suportados.\n`/placeorder <fromAsset> <toAsset> <amount> <price>` - Fazer um pedido limite.\n`/cancelorder <orderId>` - Cancelar um pedido.\n`/queryopenorders` - Consultar pedidos abertos.\n`/tradehistory` - Ver histórico de negociações.\n`/setlang <en|zh|es|fr|de|ja|ko|vi|it|nl|ru|pt|sv|no|da>` - Definir idioma.",
+        "description": "Conteúdo do menu de ajuda"
+    },
+    "listassets_title": "📋 *Pares de Ativos Suportados:*",
+    "permission_denied": "⚠️ Você não tem permissão para realizar esta ação."
+}

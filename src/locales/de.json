@@ -1,0 +1,15 @@
+{
+    "convert_failed": "❌ *Konvertierung Fehlgeschlagen:*\n{{errorMessage}}",
+    "convert_success": "✅ *Konvertierung Erfolgreich!*\n\n*Von:* {{fromAsset}}\n*Nach:* {{toAsset}}\n*Menge:* {{amount}}\n*Auftrags-ID:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *Rate-Limit Überschritten:*\nBitte versuchen Sie es später erneut.",
+    "not_supported": "⚠️ *Nicht Unterstütztes Paar:*\n{{fromAsset}} ↔️ {{toAsset}} wird nicht unterstützt.",
+    "status_not_found": "⚠️ *Auftrag Nicht Gefunden:*\nKein Auftrag mit ID {{orderId}} gefunden.",
+    "status_details": "*Auftrags-ID:* {{orderId}}\n*Status:* {{status}}",
+    "status_failed": "*Auftrags-ID:* {{orderId}}\n*Status:* {{status}}\n*Fehler:* {{error}}",
+    "help": {
+        "content": "📚 *Hilfemenü:*\n\n`/convert <fromAsset> <toAsset> <amount>` - Vermögenswerte konvertieren.\n`/status <orderId>` - Auftragsstatus überprüfen.\n`/help` - Hilfe anzeigen.\n`/listassets` - Unterstützte Vermögenspaaren auflisten.\n`/placeorder <fromAsset> <toAsset> <amount> <price>` - Limitauftrag platzieren.\n`/cancelorder <orderId>` - Auftrag stornieren.\n`/queryopenorders` - Offene Aufträge abfragen.\n`/tradehistory` - Handelshistorie anzeigen.\n`/setlang <en|zh|es|fr|de>` - Sprache einstellen.",
+        "description": "Hilfeseiteninhalt"
+    },
+    "listassets_title": "📋 *Unterstützte Vermögenspaaren:*",
+    "permission_denied": "⚠️ Sie haben keine Berechtigung, diese Aktion durchzuführen."
+}

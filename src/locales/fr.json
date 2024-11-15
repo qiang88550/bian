@@ -1,0 +1,15 @@
+{
+    "convert_failed": "❌ *Conversion Échouée:*\n{{errorMessage}}",
+    "convert_success": "✅ *Conversion Réussie!*\n\n*De:* {{fromAsset}}\n*À:* {{toAsset}}\n*Montant:* {{amount}}\n*ID de Commande:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *Limite de Requêtes Dépassée:*\nVeuillez réessayer plus tard.",
+    "not_supported": "⚠️ *Pair Non Supporté:*\n{{fromAsset}} ↔️ {{toAsset}} n'est pas supporté.",
+    "status_not_found": "⚠️ *Commande Non Trouvée:*\nAucune commande trouvée avec l'ID {{orderId}}.",
+    "status_details": "*ID de Commande:* {{orderId}}\n*Statut:* {{status}}",
+    "status_failed": "*ID de Commande:* {{orderId}}\n*Statut:* {{status}}\n*Erreur:* {{error}}",
+    "help": {
+        "content": "📚 *Menu d'Aide:*\n\n`/convert <fromAsset> <toAsset> <amount>` - Convertir des actifs.\n`/status <orderId>` - Vérifier le statut de la commande.\n`/help` - Afficher l'aide.\n`/listassets` - Lister les paires d'actifs supportées.\n`/placeorder <fromAsset> <toAsset> <amount> <price>` - Passer une commande limite.\n`/cancelorder <orderId>` - Annuler une commande.\n`/queryopenorders` - Rechercher les commandes ouvertes.\n`/tradehistory` - Voir l'historique des transactions.\n`/setlang <en|zh|es|fr|de>` - Définir la langue.",
+        "description": "Contenu d'aide"
+    },
+    "listassets_title": "📋 *Paires d'Actifs Supportées:*",
+    "permission_denied": "⚠️ Vous n'avez pas la permission d'effectuer cette action."
+}

@@ -1,0 +1,20 @@
+{
+    "convert_failed": "❌ *Conversion Failed:*\n{{errorMessage}}",
+    "convert_success": "✅ *Conversion Successful!*\n\n*From:* {{fromAsset}}\n*To:* {{toAsset}}\n*Amount:* {{amount}}\n*Order ID:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *Rate Limit Exceeded:*\nPlease try again later.",
+    "not_supported": "⚠️ *Currency Pair Not Supported:*\n{{fromAsset}} ↔️ {{toAsset}}。",
+    "status_not_found": "⚠️ *Order Not Found:*\nOrder ID {{orderId}} not found.",
+    "status_details": "*Order ID:* {{orderId}}\n*Status:* {{status}}",
+    "status_failed": "*Order ID:* {{orderId}}\n*Status:* {{status}}\n*Error:* {{error}}",
+    "help": {
+        "content": "📚 *Help Menu:*\n\n`/convert <fromAsset> <toAsset> <amount>` - Convert assets.\n`/status <orderId>` - Check order status.\n`/help` - Show help.\n`/listassets` - List supported asset pairs.\n`/addassets <pair1>, <pair2>` - Add supported asset pairs (Admin).\n`/removeassets <pair1>, <pair2>` - Remove supported asset pairs (Admin).\n`/tradehistory` - View trade history.\n`/setlang <en|zh|es|fr|de|it|ja|ko|nl|no|pt|ru|sv|vi|da>` - Set language."
+    },
+    "listassets_title": "📋 *Supported Asset Pairs:*",
+    "permission_denied": "⚠️ You do not have permission to perform this action.",
+    "unknown_command": "⚠️ Unknown command. Please use /help to see available commands.",
+    "no_open_orders": "✅ There are currently no open limit orders.",
+    "no_trade_history": "✅ There is currently no trade history.",
+    "invalid_asset_pair_format": "⚠️ Invalid asset pair format. Please use the `fromAsset:toAsset` format.",
+    "invalid_exchangeinfo_format": "⚠️ Invalid exchange info query format. Please use the `fromAsset:toAsset` format.",
+    "invalid_assetinfo_format": "⚠️ Invalid asset info query format. Please use the `Asset1, Asset2` format."
+}

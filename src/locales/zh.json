@@ -1,0 +1,20 @@
+{
+    "convert_failed": "❌ *转换失败:*\n{{errorMessage}}",
+    "convert_success": "✅ *转换成功！*\n\n*从:* {{fromAsset}}\n*到:* {{toAsset}}\n*数量:* {{amount}}\n*订单 ID:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *速率限制超出:*\n请稍后再试。",
+    "not_supported": "⚠️ *货币对不支持:*\n{{fromAsset}} ↔️ {{toAsset}}。",
+    "status_not_found": "⚠️ *订单未找到:*\n未找到订单 ID {{orderId}}。",
+    "status_details": "*订单 ID:* {{orderId}}\n*状态:* {{status}}",
+    "status_failed": "*订单 ID:* {{orderId}}\n*状态:* {{status}}\n*错误:* {{error}}",
+    "help": {
+        "content": "📚 *帮助菜单:*\n\n`/convert <fromAsset> <toAsset> <amount>` - 转换资产。\n`/status <orderId>` - 查询订单状态。\n`/help` - 显示帮助。\n`/listassets` - 列出支持的资产兑换对。\n`/addassets <pair1>, <pair2>` - 添加支持的资产兑换对（管理员）。\n`/removeassets <pair1>, <pair2>` - 移除支持的资产兑换对（管理员）。\n`/tradehistory` - 查看交易历史。\n`/setlang <en|zh|es|fr|de|it|ja|ko|nl|no|pt|ru|sv|vi|da>` - 设置语言。"
+    },
+    "listassets_title": "📋 *支持的资产兑换对:*",
+    "permission_denied": "⚠️ 您没有权限执行此操作。",
+    "unknown_command": "⚠️ 未知命令。请使用 /help 查看可用命令。",
+    "no_open_orders": "✅ 当前没有开放的限价单。",
+    "no_trade_history": "✅ 当前没有交易历史。",
+    "invalid_asset_pair_format": "⚠️ 无效的资产兑换对格式。请使用 `fromAsset:toAsset` 的格式。",
+    "invalid_exchangeinfo_format": "⚠️ 无效的交易对查询格式。请使用 `fromAsset:toAsset` 的格式。",
+    "invalid_assetinfo_format": "⚠️ 无效的资产查询格式。请使用 `Asset1, Asset2` 的格式。"
+}

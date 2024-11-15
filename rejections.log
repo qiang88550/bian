@@ -1,0 +1,4 @@
+2024-11-15 12:25:32 [ERROR]: unhandledRejection: binance.loadSupportedAssets is not a function
+TypeError: binance.loadSupportedAssets is not a function
+    at /www/wwwroot/jiaoben/bian3/src/main.js:47:19 - TypeError: binance.loadSupportedAssets is not a function
+    at /www/wwwroot/jiaoben/bian3/src/main.js:47:19

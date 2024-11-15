@@ -1,0 +1,15 @@
+{
+    "convert_failed": "❌ *Chuyển đổi thất bại:*\n{{errorMessage}}",
+    "convert_success": "✅ *Chuyển đổi thành công!*\n\n*Từ:* {{fromAsset}}\n*Đến:* {{toAsset}}\n*Số lượng:* {{amount}}\n*ID Đơn hàng:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *Đã vượt quá giới hạn yêu cầu:*\nVui lòng thử lại sau.",
+    "not_supported": "⚠️ *Cặp không được hỗ trợ:*\n{{fromAsset}} ↔️ {{toAsset}} không được hỗ trợ.",
+    "status_not_found": "⚠️ *Không tìm thấy đơn hàng:*\nKhông có đơn hàng nào với ID {{orderId}}.",
+    "status_details": "*ID Đơn hàng:* {{orderId}}\n*Tình trạng:* {{status}}",
+    "status_failed": "*ID Đơn hàng:* {{orderId}}\n*Tình trạng:* {{status}}\n*Lỗi:* {{error}}",
+    "help": {
+        "content": "📚 *Menu Trợ giúp:*\n\n`/convert <fromAsset> <toAsset> <amount>` - Chuyển đổi tài sản.\n`/status <orderId>` - Kiểm tra trạng thái đơn hàng.\n`/help` - Hiển thị trợ giúp.\n`/listassets` - Liệt kê các cặp tài sản hỗ trợ.\n`/placeorder <fromAsset> <toAsset> <amount> <price>` - Đặt lệnh giới hạn.\n`/cancelorder <orderId>` - Hủy đơn hàng.\n`/queryopenorders` - Tra cứu lệnh mở.\n`/tradehistory` - Xem lịch sử giao dịch.\n`/setlang <en|zh|es|fr|de|ja|ko|vi|it|nl|ru|pt|sv|no|da>` - Đặt ngôn ngữ.",
+        "description": "Nội dung trợ giúp"
+    },
+    "listassets_title": "📋 *Các cặp tài sản hỗ trợ:*",
+    "permission_denied": "⚠️ Bạn không có quyền thực hiện thao tác này."
+}

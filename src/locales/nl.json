@@ -1,0 +1,15 @@
+{
+    "convert_failed": "❌ *Conversie Mislukt:*\n{{errorMessage}}",
+    "convert_success": "✅ *Conversie Geslaagd!*\n\n*Van:* {{fromAsset}}\n*Naar:* {{toAsset}}\n*Aantal:* {{amount}}\n*Order-ID:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *Rate-Limiet Overschreden:*\nProbeer het later opnieuw.",
+    "not_supported": "⚠️ *Niet Ondersteund Paar:*\n{{fromAsset}} ↔️ {{toAsset}} wordt niet ondersteund.",
+    "status_not_found": "⚠️ *Order Niet Gevonden:*\nGeen order gevonden met ID {{orderId}}.",
+    "status_details": "*Order-ID:* {{orderId}}\n*Status:* {{status}}",
+    "status_failed": "*Order-ID:* {{orderId}}\n*Status:* {{status}}\n*Fout:* {{error}}",
+    "help": {
+        "content": "📚 *Helpmenu:*\n\n`/convert <fromAsset> <toAsset> <amount>` - Converteer assets.\n`/status <orderId>` - Controleer de status van een order.\n`/help` - Toon hulp.\n`/listassets` - Lijst ondersteunde assetparen.\n`/placeorder <fromAsset> <toAsset> <amount> <price>` - Plaats een limietorder.\n`/cancelorder <orderId>` - Annuleer een order.\n`/queryopenorders` - Zoek open orders op.\n`/tradehistory` - Bekijk handelsgeschiedenis.\n`/setlang <en|zh|es|fr|de|ja|ko|vi|it|nl|ru|pt|sv|no|da>` - Stel de taal in.",
+        "description": "Helpmenu inhoud"
+    },
+    "listassets_title": "📋 *Ondersteunde Assetparen:*",
+    "permission_denied": "⚠️ Je hebt geen toestemming om deze actie uit te voeren."
+}

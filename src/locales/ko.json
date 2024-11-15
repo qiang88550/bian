@@ -1,0 +1,15 @@
+{
+    "convert_failed": "❌ *변환 실패:*\n{{errorMessage}}",
+    "convert_success": "✅ *변환 성공!*\n\n*부터:* {{fromAsset}}\n*으로:* {{toAsset}}\n*수량:* {{amount}}\n*주문 ID:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *요청 제한 초과:*\n나중에 다시 시도해주세요.",
+    "not_supported": "⚠️ *지원되지 않는 페어:*\n{{fromAsset}} ↔️ {{toAsset}}는 지원되지 않습니다.",
+    "status_not_found": "⚠️ *주문을 찾을 수 없습니다:*\n주문 ID {{orderId}}가 없습니다.",
+    "status_details": "*주문 ID:* {{orderId}}\n*상태:* {{status}}",
+    "status_failed": "*주문 ID:* {{orderId}}\n*상태:* {{status}}\n*오류:* {{error}}",
+    "help": {
+        "content": "📚 *도움말 메뉴:*\n\n`/convert <fromAsset> <toAsset> <amount>` - 자산을 변환합니다.\n`/status <orderId>` - 주문 상태를 확인합니다.\n`/help` - 도움말을 표시합니다.\n`/listassets` - 지원되는 자산 페어를 나열합니다.\n`/placeorder <fromAsset> <toAsset> <amount> <price>` - 리밋 주문을 합니다.\n`/cancelorder <orderId>` - 주문을 취소합니다.\n`/queryopenorders` - 열린 주문을 조회합니다.\n`/tradehistory` - 거래 기록을 표시합니다.\n`/setlang <en|zh|es|fr|de|ja|ko|vi|it|nl|ru|pt|sv|no|da>` - 언어를 설정합니다.",
+        "description": "도움말 내용"
+    },
+    "listassets_title": "📋 *지원되는 자산 페어:*",
+    "permission_denied": "⚠️ 이 작업을 수행할 권한이 없습니다."
+}

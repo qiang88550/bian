@@ -1,0 +1,15 @@
+{
+    "convert_failed": "❌ *Konvertering Mislykkedes:*\n{{errorMessage}}",
+    "convert_success": "✅ *Konvertering Lykkedes!*\n\n*Fra:* {{fromAsset}}\n*Til:* {{toAsset}}\n*Mængde:* {{amount}}\n*Ordre-ID:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *Anmodningsgrænse Overskredet:*\nPrøv venligst igen senere.",
+    "not_supported": "⚠️ *Ikke Understøttet Par:*\n{{fromAsset}} ↔️ {{toAsset}} understøttes ikke.",
+    "status_not_found": "⚠️ *Ordre Ikke Fundet:*\nIngen ordre fundet med ID {{orderId}}.",
+    "status_details": "*Ordre-ID:* {{orderId}}\n*Status:* {{status}}",
+    "status_failed": "*Ordre-ID:* {{orderId}}\n*Status:* {{status}}\n*Fejl:* {{error}}",
+    "help": {
+        "content": "📚 *Hjælpe Menu:*\n\n`/convert <fromAsset> <toAsset> <amount>` - Konvertere aktiver.\n`/status <orderId>` - Tjek ordrestatus.\n`/help` - Vis hjælp.\n`/listassets` - List understøttede aktivpar.\n`/placeorder <fromAsset> <toAsset> <amount> <price>` - Placer en limitordre.\n`/cancelorder <orderId>` - Annuller en ordre.\n`/queryopenorders` - Forespørg åbne ordrer.\n`/tradehistory` - Vis handels historie.\n`/setlang <en|zh|es|fr|de|ja|ko|vi|it|nl|ru|pt|sv|no|da>` - Indstil sprog.",
+        "description": "Indhold i hjælpe menu"
+    },
+    "listassets_title": "📋 *Understøttede Aktivpar:*",
+    "permission_denied": "⚠️ Du har ikke tilladelse til at udføre denne handling."
+}

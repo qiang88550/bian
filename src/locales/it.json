@@ -1,0 +1,15 @@
+{
+    "convert_failed": "❌ *Conversione Fallita:*\n{{errorMessage}}",
+    "convert_success": "✅ *Conversione Riuscita!*\n\n*Da:* {{fromAsset}}\n*A:* {{toAsset}}\n*Quantità:* {{amount}}\n*ID Ordine:* {{orderId}}",
+    "rate_limit_exceeded": "⚠️ *Limite di Richieste Superato:*\nPer favore, riprova più tardi.",
+    "not_supported": "⚠️ *Coppia Non Supportata:*\n{{fromAsset}} ↔️ {{toAsset}} non è supportata.",
+    "status_not_found": "⚠️ *Ordine Non Trovato:*\nNessun ordine trovato con ID {{orderId}}.",
+    "status_details": "*ID Ordine:* {{orderId}}\n*Stato:* {{status}}",
+    "status_failed": "*ID Ordine:* {{orderId}}\n*Stato:* {{status}}\n*Errore:* {{error}}",
+    "help": {
+        "content": "📚 *Menu di Aiuto:*\n\n`/convert <fromAsset> <toAsset> <amount>` - Converti asset.\n`/status <orderId>` - Controlla lo stato dell'ordine.\n`/help` - Mostra l'aiuto.\n`/listassets` - Elenca le coppie di asset supportate.\n`/placeorder <fromAsset> <toAsset> <amount> <price>` - Effettua un ordine limite.\n`/cancelorder <orderId>` - Annulla un ordine.\n`/queryopenorders` - Consulta gli ordini aperti.\n`/tradehistory` - Visualizza la cronologia delle transazioni.\n`/setlang <en|zh|es|fr|de|ja|ko|vi|it|nl|ru|pt|sv|no|da>` - Imposta la lingua.",
+        "description": "Contenuto di aiuto"
+    },
+    "listassets_title": "📋 *Coppie di Asset Supportate:*",
+    "permission_denied": "⚠️ Non hai il permesso di eseguire questa azione."
+}
