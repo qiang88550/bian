@@ -15,37 +15,27 @@ jobs:
         node-version: [18.x, 20.x, 22.x]
 
     steps:
-    # Step 1: 检出代码
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # Step 2: 设置 Node.js 环境
     - name: Setup Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: "npm"  # 启用 npm 缓存
+        cache: "npm"
         cache-dependency-path: "package-lock.json"
 
-    # Step 3: 安装依赖
-    - name: Install dependencies
+    - name: Install dependencies and fix vulnerabilities
       run: |
-        npm ci  # 更快的安装方式，保证依赖与 lock 文件一致
-        npm install -g grunt-cli  # 全局安装 Grunt CLI
+        npm ci
+        npm install uuid@latest @npmcli/fs@latest --save
+        npm audit fix --force || true
 
-    # Step 4: 安全检查并修复
-    - name: Audit and fix vulnerabilities
-      run: |
-        npm audit --production || true  # 显示潜在漏洞，但不中断构建
-        npm audit fix --force || true   # 自动修复大部分安全漏洞
-
-    # Step 5: 运行 Grunt 任务
     - name: Run Grunt tasks
       run: |
         grunt
 
-    # Step 6: 发送构建通知（可选）
-    - name: Send Telegram notification
+    - name: Send Telegram notification (optional)
       if: failure() || success()
       run: |
         status="${{ job.status }}"
@@ -53,4 +43,3 @@ jobs:
         curl -X POST "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/sendMessage" \
           -d chat_id=<YOUR_CHAT_ID> \
           -d text="$message"
-
